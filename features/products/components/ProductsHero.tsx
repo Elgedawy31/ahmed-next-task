@@ -35,7 +35,7 @@ export default function ProductsHero({
                 <div className="absolute inset-0 flex items-center justify-center pointer-events-none select-none overflow-hidden">
                     <Zoom triggerOnce>
                         <h2
-                            className="whitespace-nowrap text-[70px] md:text-[100px] lg:text-[120px] font-bold text-transparent leading-none"
+                            className="whitespace-nowrap text-[50px] md:text-[100px] lg:text-[120px] font-bold text-transparent leading-none"
                             style={{ WebkitTextStroke: "1px #E5E5E5" }}
                         >
                             {displayOutline}
