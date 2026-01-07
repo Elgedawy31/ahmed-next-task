@@ -1,11 +1,12 @@
 "use client";
 
-import React, { useState } from "react";
+import { useState } from "react";
 import Image from "next/image";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { FreeMode, Navigation } from "swiper/modules";
 import type { Swiper as SwiperType } from "swiper";
 import { cn } from "@/lib/utils";
+import DecorativeLayer from "@/components/shared/DecorativeLayer";
 
 // Import Swiper styles
 import "swiper/css";
@@ -37,7 +38,7 @@ export default function ProductImages() {
     const [activeIndex, setActiveIndex] = useState(0);
 
     return (
-        <div className="w-full space-y-6">
+        <div className="w-full space-y-6 relative">
             {/* Main Slider */}
             <div className="relative aspect-square w-full bg-[#F4F4F4] rounded-[48px] overflow-hidden group">
                 {/* Top Segment Navigation */}
@@ -132,6 +133,9 @@ export default function ProductImages() {
           cursor: not-allowed;
         }
       `}</style>
+            <div className="absolute -bottom-8 left-0">
+                <DecorativeLayer className="opacity-80" />
+            </div>
         </div>
     );
 }

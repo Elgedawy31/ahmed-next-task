@@ -2,6 +2,7 @@ import ProductsHero from "../components/ProductsHero";
 import ProductBreadcrumb from "../components/ProductBreadcrumb";
 import ProductDetails from "../components/ProductDetails";
 import ProductReviews from "../components/ProductReviews";
+import SimilarProducts from "../components/SimilarProducts";
 
 export default function ProductsDetailsTemplate() {
   const breadcrumbItems = [
@@ -19,8 +20,10 @@ export default function ProductsDetailsTemplate() {
 
       <ProductReviews />
 
+      <SimilarProducts />
+
       <div className="container mx-auto px-4 py-12">
-        {/* Related products or other content could go here */}
+        {/* Other content could go here */}
       </div>
     </main>
   );

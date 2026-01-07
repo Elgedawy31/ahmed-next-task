@@ -3,6 +3,7 @@
 import { Star, MessageSquare } from "lucide-react";
 import { Progress } from "@/components/ui/progress";
 import { Button } from "@/components/ui/button";
+import DecorativeLayer from "@/components/shared/DecorativeLayer";
 
 const ratingBreakdown = [
     { stars: 5, percentage: 67 },
@@ -42,8 +43,8 @@ const reviews = [
 export default function ProductReviews() {
     return (
         <section className="container max-w-[1440px] mx-auto px-5 md:px-8 lg:px-10 py-8">
-            <div className="mb-12">
-                <h2 className="text-2xl font-bold mb-2 relative inline-block">
+            <div className="mb-12 max-w-[1110px]">
+                <h2 className="text-2xl font-semibold mb-2 relative inline-block">
                     Rating & Reviews
                     <div className="absolute -bottom-1 left-0 w-12 h-1 bg-primary rounded-full"></div>
                 </h2>
@@ -88,9 +89,15 @@ export default function ProductReviews() {
             </div>
 
             {/* Reviews List */}
-            <div className="space-y-12">
+            <div className="space-y-12 max-w-[1110px] relative">
                 {reviews.map((review, index) => (
-                    <div key={index} className="space-y-4 pb-8 border-b border-[#F4F4F4] last:border-0">
+                    <div
+                        key={index}
+                        className={cn(
+                            "space-y-4 pb-8",
+                            index !== reviews.length - 1 && "border-b border-[#F4F4F4]"
+                        )}
+                    >
                         <div className="flex justify-between items-center">
                             <div className="flex items-center gap-4">
                                 <span className="font-bold text-lg">{review.name}</span>
@@ -113,12 +120,15 @@ export default function ProductReviews() {
                         </p>
                     </div>
                 ))}
+                <div className="absolute left-0 -bottom-10">
+                    <DecorativeLayer className="opacity-80" />
+                </div>
             </div>
 
             <div className="mt-12 flex justify-center">
                 <Button
                     variant="outline"
-                    className="rounded-xl border-[#E5E5E5] h-12 px-8 text-primary font-bold hover:bg-primary/5 hover:text-primary transition-colors"
+                    className="rounded-xl cursor-pointer border-[#E5E5E5] h-12 px-8 text-primary font-bold hover:bg-primary/5 hover:text-primary transition-colors"
                 >
                     View More Comments
                 </Button>
