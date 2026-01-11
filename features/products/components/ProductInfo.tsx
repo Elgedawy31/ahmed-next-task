@@ -39,17 +39,17 @@ export default function ProductInfo() {
                             <Badge variant="outline" className="rounded-full text-primary text-sm px-4 py-1 font-normal">
                                 T-Shirt
                             </Badge>
-                            <h1 className="text-2xl md:text-[28px] font-bold leading-tight text-foreground max-w-[600px]">
+                            <h1 className="text-2xl md:text-[28px] font-[500] leading-tight text-foreground max-w-[600px]">
                                 J.VER Man Shirts Solid Long Sleeve Stretch Wrinkle-Free With Blue
                             </h1>
                         </div>
                     </Fade>
                     <div className="flex space-x-2">
-                        <button className="p-2.5 rounded-xl border border-border hover:bg-muted transition-colors">
-                            <ShoppingBag className="w-5 h-5 text-primary cursor-pointer" />
+                        <button className="p-2 rounded-lg border border-border hover:bg-muted transition-colors">
+                            <ShoppingBag className="w-8 h-8 text-primary cursor-pointer" />
                         </button>
-                        <button className="p-2.5 rounded-xl border border-border hover:bg-muted transition-colors">
-                            <Heart className="w-5 h-5 text-primary cursor-pointer" />
+                        <button className="p-2 rounded-lg border border-border hover:bg-muted transition-colors">
+                            <Heart className="w-8 h-8 text-primary cursor-pointer" />
                         </button>
                     </div>
                 </div>
@@ -58,7 +58,7 @@ export default function ProductInfo() {
                 <Fade direction="up" triggerOnce>
                     <div className="space-y-1">
                         <div className="flex items-baseline space-x-3">
-                            <span className="text-3xl font-bold">$300.00</span>
+                            <span className="text-[20px] font-[500]">$300.00</span>
                             <span className="text-lg text-muted-foreground line-through">$360.00</span>
                         </div>
                         <p className="text-sm text-muted-foreground">This price is exclusive of taxes.</p>
@@ -66,7 +66,7 @@ export default function ProductInfo() {
                 </Fade>
 
                 <Fade direction="up" triggerOnce delay={100}>
-                    <p className="leading-relaxed">
+                    <p className="leading-relaxed text-sm">
                         Lorem ipsum dolor sit , consectetuer adipiscing elit, sed diam nonummy
                         Lorem ipsum dolor sit amet, diam nonummy
                     </p>
@@ -120,7 +120,7 @@ export default function ProductInfo() {
                                     <button
                                         onClick={() => setSelectedColor(color)}
                                         className={cn(
-                                            "w-10 h-10 rounded-full border-2 transition-all p-0.5",
+                                            "w-15 h-15 bg-[#F4F7F9] rounded-full border-[1.5px] transition-all p-3",
                                             selectedColor.name === color.name ? "border-foreground" : "border-transparent"
                                         )}
                                     >
@@ -129,11 +129,7 @@ export default function ProductInfo() {
                                             style={{ backgroundColor: color.value }}
                                         />
                                     </button>
-                                    {selectedColor.name === color.name && (
-                                        <Fade triggerOnce>
-                                            <span className="text-[10px] uppercase font-bold text-foreground">{color.name}</span>
-                                        </Fade>
-                                    )}
+
                                 </div>
                             ))}
                         </div>
