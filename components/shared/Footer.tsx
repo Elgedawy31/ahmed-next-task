@@ -71,13 +71,13 @@ export default function Footer() {
                     <div className="space-y-8 col-span-2 lg:col-span-2">
                         <div className="space-y-4">
                             <h3 className="text-xl font-bold">Send Email</h3>
-                            <div className="relative flex items-center bg-white rounded-2xl p-2 h-[64px]">
+                            <div className="relative flex items-center bg-white rounded-2xl p-2 h-[64px] overflow-hidden">
                                 <input
                                     type="email"
                                     placeholder="Email address"
-                                    className="bg-transparent border-none outline-none flex-1 px-4 text-black text-sm placeholder:text-[#8A8A8A]"
+                                    className="bg-transparent border-none outline-none flex-1 px-4 text-black text-sm placeholder:text-[#8A8A8A] min-w-0"
                                 />
-                                <button className="bg-primary hover:bg-primary/90 text-white px-8 h-full rounded-xl font-bold transition-colors relative  right-5">
+                                <button className="bg-primary hover:bg-primary/90 text-white px-8 h-full rounded-xl font-bold transition-colors relative shrink-0">
                                     Send
                                 </button>
                             </div>
