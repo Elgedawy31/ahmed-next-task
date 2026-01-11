@@ -65,9 +65,9 @@ export function Navbar({ className }: NavbarProps) {
                 <Link
                   key={href}
                   href={href}
-                  className="flex items-center gap-1.5 text-[15px] font-medium text-[#1A1A1A] transition-colors hover:text-primary"
+                  className="flex items-center gap-1.5 text-[14px] font-medium text-[#8A8A8A] transition-colors hover:text-primary"
                 >
-                  {Icon && <Icon className="h-4 w-4" />}
+                  {Icon && <Icon className="h-5 w-5" />}
                   <span>{label}</span>
                 </Link>
               ))}
@@ -77,31 +77,28 @@ export function Navbar({ className }: NavbarProps) {
 
         {/* Right: actions & Mobile Toggle */}
         <div className="flex items-center gap-1 md:gap-3">
-          <div className="hidden sm:flex items-center gap-1 md:gap-3">
+          <div className="hidden sm:flex items-center gap-3 md:gap-3">
             <Fade triggerOnce direction="down" cascade damping={0.05} delay={200}>
               <Button
                 type="button"
                 variant="ghost"
-                size="icon"
                 className="text-black hover:bg-primary/10 hover:text-primary rounded-xl"
               >
-                <Handbag className="h-5 w-5" />
+                <Handbag className="h-6 w-6" />
               </Button>
               <Button
                 type="button"
                 variant="ghost"
-                size="icon"
                 className="text-black hover:bg-primary/10 hover:text-primary rounded-xl"
               >
-                <Bell className="h-5 w-5" />
+                <Bell className="h-6 w-6" />
               </Button>
               <Button
                 type="button"
                 variant="ghost"
-                size="icon"
                 className="text-black hover:bg-primary/10 hover:text-primary rounded-xl"
               >
-                <Heart className="h-5 w-5" />
+                <Heart className="h-6 w-6" />
               </Button>
 
               <Button
@@ -118,7 +115,7 @@ export function Navbar({ className }: NavbarProps) {
                 variant="ghost"
                 className="flex h-10 px-4 text-black items-center justify-center rounded-full hover:bg-primary/10 transition-all font-medium"
               >
-                <UserRound className="h-5 w-5 mr-1.5" />
+                <UserRound className="h-6 w-6 mr-1.5" />
                 <ChevronDown className="h-3 w-3" />
               </Button>
             </Fade>
@@ -127,7 +124,6 @@ export function Navbar({ className }: NavbarProps) {
           {/* Mobile Menu Toggle */}
           <Button
             variant="ghost"
-            size="icon"
             className="lg:hidden text-black h-10 w-10 rounded-xl hover:bg-primary/10"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
           >
@@ -155,8 +151,8 @@ export function Navbar({ className }: NavbarProps) {
               )}
               style={{ transitionDelay: `${idx * 50}ms` }}
             >
-              <div className="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center text-primary">
-                {Icon && <Icon className="h-5 w-5" />}
+              <div className=" rounded-xl bg-primary/10 flex items-center justify-center text-primary">
+                {Icon && <Icon className="h-6 w-6" />}
               </div>
               {label}
             </Link>
@@ -167,7 +163,7 @@ export function Navbar({ className }: NavbarProps) {
               EN / AR
             </Button>
             <Button className="h-12 rounded-xl bg-primary text-white font-semibold flex items-center justify-center gap-2">
-              <UserRound className="h-5 w-5" />
+              <UserRound className="h-6 w-6" />
               Account
             </Button>
           </div>
