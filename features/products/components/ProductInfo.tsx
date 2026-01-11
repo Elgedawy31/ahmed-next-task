@@ -137,42 +137,46 @@ export default function ProductInfo() {
                 </Fade>
 
                 {/* Quantity & Add to Cart */}
-                <div className="space-y-6 pt-4">
+                <div className="space-y-4 pt-4">
                     <Fade direction="up" triggerOnce delay={300}>
-                        <div className="flex items-center justify-between">
-                            <div className="flex flex-col">
-                                <span className="text-sm font-bold">Quantity</span>
-                                <span className="text-xs text-muted-foreground">($300.00 for Piece)</span>
+                        <div className="flex flex-col space-y-4">
+                            <div className="flex items-center gap-2">
+                                <span className="text-base font-semibold text-foreground">Quantity</span>
+                                <span className="text-sm text-muted-foreground">($300.00 for Piece)</span>
                             </div>
 
-                            <div className="flex items-center bg-[#F4F4F4] rounded-xl p-1">
-                                <button
-                                    onClick={decrement}
-                                    className="p-1.5 hover:bg-white rounded-lg transition-colors"
-                                >
-                                    <Minus className="w-4 h-4" />
-                                </button>
-                                <span className="w-12 text-center font-bold">{quantity.toString().padStart(2, '0')}</span>
-                                <button
-                                    onClick={increment}
-                                    className="p-1.5 hover:bg-white rounded-lg transition-colors"
-                                >
-                                    <Plus className="w-4 h-4" />
-                                </button>
-                            </div>
+                            <div className="flex items-center justify-between gap-4">
+                                <div className="flex items-center gap-6">
+                                    <div className="flex items-center bg-[#F8F8F8] rounded-xl p-3 gap-4">
+                                        <button
+                                            onClick={decrement}
+                                            className="w-8 h-8 flex items-center justify-center bg-white rounded-lg shadow-sm text-foreground hover:bg-gray-50 transition-colors"
+                                        >
+                                            <Minus className="w-4 h-4" />
+                                        </button>
+                                        <span className="w-12 text-center font-semibold text-lg">{quantity.toString().padStart(2, '0')}</span>
+                                        <button
+                                            onClick={increment}
+                                            className="w-8 h-8 flex items-center justify-center bg-white rounded-lg shadow-sm text-foreground hover:bg-gray-50 transition-colors"
+                                        >
+                                            <Plus className="w-4 h-4" />
+                                        </button>
+                                    </div>
 
-                            <div className="text-2xl font-bold">
-                                ${(300 * quantity).toFixed(2)}
+                                    <div className="text-[24px] font-[500] text-foreground">
+                                        ${(300 * quantity).toFixed(2)}
+                                    </div>
+                                </div>
+
+                                <AttentionSeeker effect="pulse" triggerOnce delay={500} className="flex-1 max-w-[200px]">
+                                    <button className="w-full h-12 bg-primary cursor-pointer hover:bg-primary/90 text-white rounded-xl flex items-center justify-center font-medium text-base transition-colors group shadow-sm">
+                                        Add To Cart
+                                        <ShoppingBag className="ml-2 w-4 h-4 group-hover:scale-110 transition-transform" />
+                                    </button>
+                                </AttentionSeeker>
                             </div>
                         </div>
                     </Fade>
-
-                    <AttentionSeeker effect="pulse" triggerOnce delay={500}>
-                        <button className="w-full h-14 bg-primary cursor-pointer hover:bg-primary/90 text-white rounded-2xl flex items-center justify-center font-semibold text-lg transition-colors group">
-                            Add To Cart
-                            <ShoppingBag className="ml-2 w-5 h-5 group-hover:scale-110 transition-transform" />
-                        </button>
-                    </AttentionSeeker>
                 </div>
             </div>
         </Fade>
