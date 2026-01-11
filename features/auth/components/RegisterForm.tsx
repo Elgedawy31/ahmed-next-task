@@ -202,7 +202,7 @@ export default function RegisterForm() {
           </div>
           {!errors.password && (
             <p id="password-hint" className="text-xs text-muted-foreground">
-              Password must be at least 8 characters, contain a letter, and include @ symbol
+              Password must be at least 8 characters, contain an uppercase letter, a lowercase letter, and include @ symbol
             </p>
           )}
           {errors.password && (

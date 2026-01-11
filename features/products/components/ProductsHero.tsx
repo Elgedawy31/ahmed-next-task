@@ -15,7 +15,7 @@ export default function ProductsHero({
     const displayOutline = outlineTitle || title;
 
     return (
-        <section className="relative w-full h-[300px] flex items-center justify-center overflow-hidden bg-section-gray">
+        <section className="relative w-full h-[200px] flex items-center justify-center overflow-hidden bg-section-gray">
             {/* Background Image */}
             <Fade triggerOnce className="absolute inset-0 z-0">
                 <div className="relative w-full h-full">
