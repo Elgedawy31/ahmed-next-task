@@ -145,7 +145,7 @@ export default function ProductInfo() {
                                 <span className="text-sm text-muted-foreground">($300.00 for Piece)</span>
                             </div>
 
-                            <div className="flex items-center justify-between gap-4">
+                            <div className="flex  justify-between gap-4 md:flex-row flex-col">
                                 <div className="flex items-center gap-6">
                                     <div className="flex items-center bg-[#F8F8F8] rounded-xl p-3 gap-4">
                                         <button
