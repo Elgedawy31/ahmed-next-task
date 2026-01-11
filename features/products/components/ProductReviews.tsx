@@ -65,9 +65,9 @@ export default function ProductReviews() {
                             {ratingBreakdown.map((item) => (
                                 <Fade key={item.stars} direction="right" cascade damping={0.1} triggerOnce>
                                     <div className="flex items-center gap-4">
-                                        <div className="flex items-center gap-1 w-6">
-                                            <span className="text-sm font-medium">{item.stars}</span>
-                                            <Star className="w-4 h-4 fill-primary text-primary" />
+                                        <div className="flex items-center gap-2">
+                                            <Star className="w-6 h-6 fill-primary text-primary" />
+                                            <span className="text-[20px] font-medium text-muted-foreground">{item.stars}</span>
                                         </div>
                                         <Progress value={item.percentage} className="h-1.5 flex-1 bg-[#F4F4F4]" />
                                         <span className="text-sm font-medium w-10">% {item.percentage}</span>
@@ -114,7 +114,7 @@ export default function ProductReviews() {
                                             <Star
                                                 key={i}
                                                 className={cn(
-                                                    "w-4 h-4",
+                                                    "w-5 h-5",
                                                     i < review.rating ? "fill-primary text-primary" : "text-[#E5E5E5]"
                                                 )}
                                             />
