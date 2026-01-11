@@ -77,7 +77,7 @@ export default function Footer() {
                                     placeholder="Email address"
                                     className="bg-transparent border-none outline-none flex-1 px-4 text-black text-sm placeholder:text-[#8A8A8A]"
                                 />
-                                <button className="bg-primary hover:bg-primary/90 text-white px-8 h-full rounded-xl font-bold transition-colors">
+                                <button className="bg-primary hover:bg-primary/90 text-white px-8 h-full rounded-xl font-bold transition-colors relative  right-5">
                                     Send
                                 </button>
                             </div>
