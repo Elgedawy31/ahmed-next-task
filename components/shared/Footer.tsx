@@ -19,7 +19,7 @@ export default function Footer() {
         <footer
             className="w-full text-white relative overflow-hidden mt-12 bg-[#3B3026]"
             style={{
-                backgroundImage: 'linear-gradient(rgba(2, 2, 2, 0.5), rgba(2, 2, 2, 0.5)), url("/footer-bg.svg")',
+                backgroundImage: 'linear-gradient(rgba(2, 2, 2, 0.7), rgba(2, 2, 2, 0.7)), url("/footer-bg.svg")',
                 backgroundSize: 'cover',
                 backgroundPosition: 'center'
             }}

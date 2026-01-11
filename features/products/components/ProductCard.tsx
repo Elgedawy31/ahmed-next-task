@@ -36,22 +36,22 @@ export default function ProductCard({ product, className }: ProductCardProps) {
                 )}
 
                 <div className="absolute top-4 right-4 z-10 flex items-center gap-1.5">
-                    <button className="w-8 h-8 bg-white rounded-lg flex items-center justify-center text-[#C48B8B] hover:bg-[#FBFBFB] transition-all shadow-sm border border-[#F0F0F0]">
+                    <button className="p-1 bg-white rounded-lg flex items-center justify-center text-[#C48B8B] hover:bg-[#FBFBFB] transition-all shadow-sm border border-[#F0F0F0]">
                         {product.actionIcon === "bag-check" ? (
                             <div className="relative">
-                                <div className="w-5 h-5 bg-[#0E3E14] rounded-md flex items-center justify-center">
+                                <div className="w-6 h-6 bg-[#0E3E14] rounded-md flex items-center justify-center">
                                     <ShoppingBag className="w-3 h-3 text-white" />
                                 </div>
                             </div>
                         ) : (
-                            <ShoppingBag className="w-4 h-4 stroke-[1.5px]" />
+                            <ShoppingBag className="w-6 h-6 stroke-[1.5px]" />
                         )}
                     </button>
-                    <button className="w-8 h-8 bg-white rounded-lg flex items-center justify-center text-[#C48B8B] hover:bg-[#FBFBFB] transition-all shadow-sm border border-[#F0F0F0]">
+                    <button className="p-1 bg-white rounded-lg flex items-center justify-center text-[#C48B8B] hover:bg-[#FBFBFB] transition-all shadow-sm border border-[#F0F0F0]">
                         {product.actionIcon === "bag-check" ? (
-                            <Heart className="w-4 h-4 fill-[#0E3E14] text-[#0E3E14]" />
+                            <Heart className="w-6 h-6 fill-[#0E3E14] text-[#0E3E14]" />
                         ) : (
-                            <Heart className="w-4 h-4 stroke-[1.5px]" />
+                            <Heart className="w-6 h-6 stroke-[1.5px]" />
                         )}
                     </button>
                 </div>
