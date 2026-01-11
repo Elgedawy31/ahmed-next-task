@@ -24,7 +24,7 @@ interface ProductBreadcrumbProps {
 export default function ProductBreadcrumb({ items }: ProductBreadcrumbProps) {
     return (
         <Fade direction="right" triggerOnce>
-            <nav className="container max-w-[1440px] mx-auto px-5 md:px-8 lg:px-10 py-6">
+            <nav className="container max-w-[1440px] mx-auto px-5 md:px-8 lg:px-10 py-6 bg-[#ECECEC66] rounded-[16px]">
                 <Breadcrumb>
                     <BreadcrumbList className="flex items-center gap-2">
                         {items.map((item, index) => (
@@ -34,20 +34,19 @@ export default function ProductBreadcrumb({ items }: ProductBreadcrumbProps) {
                                         <BreadcrumbLink
                                             asChild
                                             className={cn(
-                                                "text-sm font-medium transition-colors hover:text-primary",
-                                                index === 0 ? "text-primary" : "text-muted-foreground"
+                                                "text-base font-[500] transition-colors hover:text-muted-foreground text-foreground"
                                             )}
                                         >
                                             <Link href={item.href}>{item.label}</Link>
                                         </BreadcrumbLink>
                                     ) : (
-                                        <BreadcrumbPage className="text-sm font-medium text-muted-foreground">
+                                        <BreadcrumbPage className="text-base font-[500] text-muted-foreground">
                                             {item.label}
                                         </BreadcrumbPage>
                                     )}
                                 </BreadcrumbItem>
                                 {index < items.length - 1 && (
-                                    <BreadcrumbSeparator className="text-muted-foreground/40">
+                                    <BreadcrumbSeparator className="text-foreground">
                                         <ChevronRight className="w-4 h-4" />
                                     </BreadcrumbSeparator>
                                 )}
